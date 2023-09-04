@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <title>Frontend Mentor | Rock, Paper, Scissors</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="gameNormal.js" defer></script>
+  </head>
+  <body>
+    <div class="courtain"></div>
+    <div class="game-original">
+      <header class="game-h">
+        <img src="images/logo.svg" alt="logo" />
+        <div class="score">
+          <p>SCORE</p>
+          <h1 id="score-normal"></h1>
+        </div>
+      </header>
+      <section class="gameControl-wrapper">
+        <div class="paperPos-NormalGame">
+          <button class="game-but paper" value="paper">
+            <div class="buttonMid">
+              <img src="images/icon-paper.svg" alt="paper" draggable="false" />
+            </div>
+          </button>
+        </div>
+        <div class="scissorsPos-NormalGame">
+          <button class="game-but scissors" value="scissors">
+            <div class="buttonMid">
+              <img
+                src="images/icon-scissors.svg"
+                alt="scissors"
+                draggable="false"
+              />
+            </div>
+          </button>
+        </div>
+        <div class="rockPos-NormalGame">
+          <button class="game-but rock" value="rock">
+            <div class="buttonMid">
+              <img src="images/icon-rock.svg" alt="rock" draggable="false" />
+            </div>
+          </button>
+        </div>
+        <img
+          src="images/bg-triangle.svg"
+          alt="triangle"
+          class="background-triangle"
+        />
+      </section>
+      <button class="rules-normal">RULES</button>
+      <button class="rules-normal reset-game">RESET GAME</button>
+      <div class="rules-page">
+        <header>
+          <h1>RULES</h1>
+          <img src="images/icon-close.svg" alt="close" id="close" />
+        </header>
+        <img
+          src="images/image-rules.svg"
+          alt="rules"
+          class="rules-img"
+          draggable="false"
+        />
+      </div>
+    </div>
+    <div class="game-bonus"></div>
+  </body>
+</html>

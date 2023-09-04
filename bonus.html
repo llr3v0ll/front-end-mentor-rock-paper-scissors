@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <title>Frontend Mentor | Rock, Paper, Scissors</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="gameBonus.js" defer></script>
+  </head>
+  <body>
+    <div class="courtain"></div>
+    <div class="game-original">
+      <header class="game-h">
+        <img src="images/logo-bonus.svg" alt="logo" />
+        <div class="score">
+          <p>SCORE</p>
+          <h1 id="score-bonus"></h1>
+        </div>
+      </header>
+      <section class="gameControl-wrapper">
+        <div class="paperPos-BonusGame">
+          <button class="game-butBonus paper" value="paper">
+            <div class="buttonMidBonus">
+              <img src="images/icon-paper.svg" alt="paper" draggable="false" />
+            </div>
+          </button>
+        </div>
+        <div class="scissorsPos-BonusGame">
+          <button class="game-butBonus scissors" value="scissors">
+            <div class="buttonMidBonus">
+              <img
+                src="images/icon-scissors.svg"
+                alt="scissors"
+                draggable="false"
+              />
+            </div>
+          </button>
+        </div>
+        <div class="rockPos-BonusGame">
+          <button class="game-butBonus rock" value="rock">
+            <div class="buttonMidBonus">
+              <img src="images/icon-rock.svg" alt="rock" draggable="false" />
+            </div>
+          </button>
+        </div>
+        <div class="lizardPos-BonusGame">
+          <button class="game-butBonus lizard" value="lizard">
+            <div class="buttonMidBonus">
+              <img
+                src="images/icon-lizard.svg"
+                alt="lizard"
+                draggable="false"
+              />
+            </div>
+          </button>
+        </div>
+        <div class="spockPos-BonusGame">
+          <button class="game-butBonus spock" value="spock">
+            <div class="buttonMidBonus">
+              <img src="images/icon-spock.svg" alt="spock" draggable="false" />
+            </div>
+          </button>
+        </div>
+        <img
+          src="images/bg-pentagon.svg"
+          alt="pentagon"
+          class="background-pentagon"
+        />
+      </section>
+      <button class="rules-normal">RULES</button>
+      <button class="rules-normal reset-game">RESET GAME</button>
+      <div class="rules-page">
+        <header>
+          <h1>RULES</h1>
+          <img src="images/icon-close.svg" alt="close" id="close" />
+        </header>
+        <img
+          src="images/image-rules-bonus.svg"
+          alt="rules"
+          class="rules-bonus-img"
+          draggable="false"
+        />
+      </div>
+    </div>
+  </body>
+</html>

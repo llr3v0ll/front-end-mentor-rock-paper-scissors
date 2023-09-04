@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <title>Frontend Mentor | Rock, Paper, Scissors</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body class="main-menu">
+    <main>
+      <img src="images/logo.svg" alt="logo-original" class="mm-logo-ori" />
+      <button class="original-button mmb">ORIGINAL</button>
+      <button class="bonus-button mmb">BONUS</button>
+      <img src="images/logo-bonus.svg" alt="logo-bonus" class="mm-logo-bon" />
+    </main>
+    <div class="redirect-courtain"></div>
+    <footer>
+      <p>
+        Challenge by
+        <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a
+        >. Coded by
+        <a href="https://www.frontendmentor.io/profile/llr3v0ll"
+          >Stoica Claudiu</a
+        >.
+      </p>
+    </footer>
+  </body>
+  <script>
+    const origBut = document.querySelector(".original-button"),
+      bonusBut = document.querySelector(".bonus-button"),
+      logoOr = document.querySelector(".mm-logo-ori"),
+      logoBo = document.querySelector(".mm-logo-bon"),
+      redirectcourtain = document.querySelector(".redirect-courtain");
+
+    origBut.addEventListener("mouseover", highlightLogo);
+    bonusBut.addEventListener("mouseover", highlightLogo);
+    origBut.addEventListener("mouseout", backtodef);
+    bonusBut.addEventListener("mouseout", backtodef);
+    origBut.addEventListener("click", animationRedi);
+    bonusBut.addEventListener("click", animationRedi);
+
+    function highlightLogo(event) {
+      if (event.target.classList[0] == "original-button") {
+        logoOr.style = "opacity:100%;";
+      } else {
+        logoBo.style = "opacity:100%;";
+      }
+    }
+    function backtodef(event) {
+      if (event.target.classList[0] == "original-button") {
+        logoOr.style = "opacity:20%;";
+      } else {
+        logoBo.style = "opacity:20%;";
+      }
+    }
+    let reEvent;
+    function animationRedi(event) {
+      reEvent = event;
+      redirectcourtain.classList.add("animation");
+      setTimeout(() => {
+        if (reEvent.target.classList[0] == "original-button") {
+          window.location.href = "original.html";
+        } else {
+          window.location.href = "bonus.html";
+        }
+      }, 1000);
+    }
+  </script>
+</html>
