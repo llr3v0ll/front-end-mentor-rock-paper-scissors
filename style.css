@@ -334,6 +334,97 @@ img {
 .rules-bonus-img {
   margin-top: -40px;
 }
+
+/* MAIN MENU PAGE */
+
+.main-menu {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+.main-menu main {
+  display: flex;
+  flex-direction: column;
+}
+.mmb {
+  height: 80px;
+  width: 300px;
+  border: 2px solid white;
+  background-color: transparent;
+  border-radius: 5px;
+  font-size: 40px;
+  font-weight: 700;
+  color: white;
+  cursor: pointer;
+}
+.mmb:hover {
+  background-color: white;
+  color: var(--Dark-Text);
+}
+.original-button {
+  margin-bottom: 50px;
+}
+.mm-logo-ori {
+  position: absolute;
+  left: 10vw;
+  height: 200px;
+  top: 350px;
+  opacity: 20%;
+}
+.mm-logo-bon {
+  position: absolute;
+  right: 10vw;
+  height: 300px;
+  top: 300px;
+  opacity: 20%;
+}
+footer {
+  position: absolute;
+  bottom: 5vh;
+  color: white;
+}
+a {
+  color: var(--Score-Text);
+}
+.redirect-courtain {
+  height: 100vh;
+  width: 100%;
+  position: absolute;
+  background: radial-gradient(
+    circle at top,
+    hsl(214, 47%, 23%),
+    hsl(237, 49%, 15%)
+  );
+  z-index: 10000;
+  bottom: -100vh;
+}
+.animation {
+  animation-name: rediCourtain;
+  animation-duration: 1s;
+  animation-fill-mode: revert;
+}
+@keyframes rediCourtain {
+  0% {
+    display: none;
+    bottom: -100vh;
+  }
+  1% {
+    display: block;
+  }
+  100% {
+    bottom: 0;
+  }
+}
+@media (max-width: 1200px) {
+  .mm-logo-ori {
+    display: none;
+  }
+  .mm-logo-bon {
+    display: none;
+  }
+}
+
 /* MOBILE */
 @media (max-width: 600px) {
   body {
@@ -504,90 +595,5 @@ img {
   .spockPos-BonusGame {
     top: 105px;
     right: 70px;
-  }
-}
-/* MAIN MENU PAGE */
-
-.main-menu {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  overflow: hidden;
-}
-.main-menu main {
-  display: flex;
-  flex-direction: column;
-}
-.mmb {
-  height: 80px;
-  width: 300px;
-  border: 2px solid white;
-  background-color: transparent;
-  border-radius: 5px;
-  font-size: 40px;
-  font-weight: 700;
-  color: white;
-  cursor: pointer;
-}
-.mmb:hover {
-  background-color: white;
-  color: var(--Dark-Text);
-}
-.original-button {
-  margin-bottom: 50px;
-}
-.mm-logo-ori {
-  position: absolute;
-  left: 10vw;
-  height: 200px;
-  top: 350px;
-  opacity: 20%;
-}
-.mm-logo-bon {
-  position: absolute;
-  right: 10vw;
-  height: 300px;
-  top: 300px;
-  opacity: 20%;
-}
-footer {
-  position: absolute;
-  bottom: 5vh;
-  color: white;
-}
-a {
-  color: var(--Score-Text);
-}
-.redirect-courtain {
-  height: 100vh;
-  width: 100%;
-  position: absolute;
-  background: radial-gradient(
-    circle at top,
-    hsl(214, 47%, 23%),
-    hsl(237, 49%, 15%)
-  );
-  z-index: 10000;
-  bottom: -100vh;
-}
-.animation {
-  animation-name: rediCourtain;
-  animation-duration: 1s;
-  animation-fill-mode: forwards;
-}
-@keyframes rediCourtain {
-  0% {
-    bottom: -100vh;
-  }
-  100% {
-    bottom: 0;
-  }
-}
-@media (max-width: 1200px) {
-  .mm-logo-ori {
-    display: none;
-  }
-  .mm-logo-bon {
-    display: none;
   }
 }
