@@ -73,8 +73,15 @@
           class="background-pentagon"
         />
       </section>
-      <button class="rules-normal">RULES</button>
-      <button class="rules-normal reset-game">RESET GAME</button>
+      <img
+        src="images/icons8-hamburger-menu.svg"
+        alt="menu"
+        class="hamburger-menu"
+      />
+      <div class="rules-container">
+        <button class="rules-normal">RULES</button>
+        <button class="rules-normal reset-game">RESET GAME</button>
+      </div>
       <div class="rules-page">
         <header>
           <h1>RULES</h1>
@@ -88,5 +95,17 @@
         />
       </div>
     </div>
+    <script>
+      const hamburger = document.querySelector(".hamburger-menu"),
+        containerP = document.querySelector(".rules-container");
+
+      hamburger.addEventListener("click", () => {
+        if (containerP.style.display == "flex") {
+          containerP.style.display = "none";
+        } else {
+          containerP.style.display = "flex";
+        }
+      });
+    </script>
   </body>
 </html>
